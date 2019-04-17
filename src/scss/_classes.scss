@@ -1,0 +1,105 @@
+.container,
+.row {
+  &::after {
+    display: none;
+  }
+}
+
+.cards {
+  background: map-fetch($colours, "gray");
+  padding: 50px 0;
+
+  header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 50px;
+    width: 365px;
+    background: map-fetch($colours, "darkest-gray");
+    text-align: center;
+
+    h2 {
+      .fa,
+      .fab,
+      .fas {
+        padding-right: 15px;
+      }
+    }
+    p {
+        text-align: justify;
+    }
+    .btn {
+        font-family: "SegoeUI", Arial, Helvetica, sans-serif;
+        font-size: 15px; 
+        font-weight: 200;
+        color: map-fetch($colours, "text");
+        background: map-fetch($colours, "brand-primary"); 
+
+        &:hover, &:active, &:focus { 
+            background: darken(map-fetch($colours, "brand-primary"), 10%);
+        }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 15px 25px;
+  color: map-fetch($colours, "white");
+  font-family: map-fetch($fonts, "headings", "family");
+  font-weight: map-fetch($fonts, "headings", "weight");
+  font-size: 28px;
+  line-height: 28px;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: map-fetch($colours, "white");
+    &.btn-twitch {
+      background-color: darken(map-fetch($colours, "twitch"), 10%);
+    }
+  }
+
+  .fa,
+  .fab,
+  .fas {
+    font-size: 26px;
+    margin-right: 10px;
+  }
+
+  &.btn-twitch {
+    background: map-fetch($colours, "twitch");
+    &:hover,
+    &:active,
+    &:focus {
+      background: darken(map-fetch($colours, "twitch"), 10%);
+    }
+  }
+  &.btn-twitter {
+    background: map-fetch($colours, "twitter");
+    &:hover,
+    &:active,
+    &:focus {
+      background: darken(map-fetch($colours, "twitter"), 10%);
+    }
+  }
+  &.btn-discord {
+    background: map-fetch($colours, "discord");
+    &:hover, &:active, &:focus { 
+        background: darken(map-fetch($colours, "discord"), 10%);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.list-group { 
+    text-align: left;
+
+    .list-group-item { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        height: 35px;
+        background: theme-color("dark");
+        border-color: gray("700");
+        line-height: 34px;
+        outline: 0;     
+        color: theme-color("text");
+        
+        &:last-child {
+            border-bottom: 1px solid gray("700") !important;
+        }
+        
+        .badge { 
+            //color: theme-color("white");
+            font-weight: 200;
+            font-size: 100%;
+        }
+
+        &:hover, &:active, &:focus, &[aria-describedby] { 
+            cursor: pointer;
+            background: darken(theme-color("dark"), 1%);
+            color: color("white");
+
+            .badge { 
+                color: theme-color("secondary");
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.popover { 
+    background-color: theme-color("light");
+    border-color: theme-color("dark");
+
+    .arrow { 
+        &::before, &::after  {
+            border-right-color: theme-color("light");
+        }
+    }
+}

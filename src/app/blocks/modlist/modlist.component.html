@@ -1,0 +1,35 @@
+<section id="moderators">
+    <div class="container">
+        <div class="row">
+            <header *ngIf="content.fields.showContent">
+                <h3>{{content.fields.title}}</h3>
+                <small>{{content.fields.body}}</small>
+            </header>
+            <section class="tabbed-content row">
+                <aside class="col-3">
+                    <nav class="nav flex-column nav-pills" id="vpills-tab" role="tablist" aria-orientation="vertical">
+                        <a *ngFor="let mod of content.fields.mods" href="#{{mod.fields.tabPanelId}}" [ngClass]="{'nav-link': true, 'active': mod.fields.active}" id="{{mod.fields.tabId}}" data-toggle="pill" role="tab">
+                            <img src="{{mod.fields.icon.fields.file.url}}" alt="{{mod.fields.icon.fields.description}}">
+                            <span>{{mod.fields.name}}</span>
+                        </a>
+                    </nav>
+                </aside>
+                <section class="col-9">
+                    <div class="tab-content" id="vpillsContent">
+                        <article *ngFor="let mod of content.fields.mods" [ngClass]="{'tab-pane': true, 'fade': true, 'active': mod.fields.active, 'show': mod.fields.active}" role="tabpanel" id="{{mod.fields.tabPanelId}}">
+                            <header>
+                                <h3>{{mod.fields.name}}</h3>
+                                <div class="socials">
+                                    <a *ngFor="let social of mod.fields.socials" href="social.fields.url" role="button" class="btn-{{social.fields.classname}}">
+                                        <i class="fab fa-{{social.fields.classname}}"></i>
+                                    </a>
+                                </div>
+                            </header>
+                            <p>{{mod.fields.body}}</p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+/**
+ *website.scss
+ *
+ * @description: Entry-point for all styling of the website
+ * @author: Bryan Dijksterhuis
+ * @version: 0.0.1
+ * @date: 2018/11/13   
+ **/
+
+// -- Lib
+@import "scss/lib/functions";
+@import "scss/lib/variables";
+
+// -- Vendors
+@import "scss/vendors/baseweb";
+@import "scss/vendors/bootstrap";
+
+// -- Fonts
+@import "scss/fonts/font-awesome";
+@import "scss/fonts/comicbookcommando";
+@import "scss/fonts/opensans";
+
+// -- Basic styling
+@import "scss/base/elements";
+
+// -- Components
+@import "scss/components/icons";
+@import "scss/components/navbar";
+@import "scss/components/breadcrumbs";
+@import "scss/components/highlight";
+@import "scss/components/content";
+@import "scss/components/cards";
+@import "scss/components/listgroups";
+@import "scss/components/popovers";
+@import "scss/components/quotes";
+@import "scss/components/moderators";
+@import "scss/components/twitterfeed";
+@import "scss/components/footer";

@@ -1,0 +1,10 @@
+// -- Font: ComicBookCommando
+@font-face {
+	$f: "#{$fontsDir}/comicbookcommando/ComicBookCommando"; // Load local temp variable
+	font-family: 'Comic Book Commando';
+	src: url("#{$f}.eot");
+	src: local('Comic Book Commando'), local('ComicBookCommando'), url("#{$f}.eot?#iefix") format('embedded-opentype'), url("#{$f}.woff2") format('woff2'),
+		url("#{$f}.woff") format('woff'), url("#{$f}.ttf") format('truetype'), url("#{$f}.svg#ComicBookCommando") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

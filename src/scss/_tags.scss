@@ -1,0 +1,70 @@
+html, body { 
+    background: map-fetch($colours, "darkest-gray");
+    color: map-fetch($colours, "text");
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 26px;
+}
+
+body { }
+
+h1, h2, h3, h4, h5 {  
+    color: map-get($colours, "white");
+}
+
+h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-family: map-fetch($fonts, "headings", "family");
+    font-weight: map-fetch($fonts, "headings", "weight");
+}
+h2 {
+    font-size: 26pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+
+    .fa, .fas, .fab { 
+        font-size: 20pt;
+    }
+}
+h3 {
+    text-transform: uppercase;
+    font-family: map-fetch($fonts, "headings", "family");
+    font-weight: map-fetch($fonts, "headings", "weight");
+    font-size: 36px;
+}
+h4 {
+    text-transform: uppercase;
+    font-family: map-fetch($fonts, "headings", "family");
+    font-weight: map-fetch($fonts, "headings", "weight");
+    font-size: 26px;
+}
+h5 {}
+
+blockquote {
+    width: 100%;
+    background: unset;
+    color: map-get($colours, "white");
+    font-family: map-fetch($fonts, "quotes", "family");
+    font-size: map-fetch($fonts, "quotes", "size"); 
+    font-weight: map-fetch($fonts, "quotes", "weight");
+    text-align: center;
+    margin: 0;
+    padding: 0;   
+    font-style: italic;
+}
+
+a { 
+    text-decoration: none;
+    border: none;
+
+    &:hover, &:active, &:focus { 
+        border: none;
+        text-decoration: underline;
+    }
+}
+
+main { 
+    width: 100%;
+}

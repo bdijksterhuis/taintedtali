@@ -1,0 +1,89 @@
+/**
+ * _variables.scss
+ *
+ * @description: Shared variables between all projects
+ * @author: Bryan Dijksterhuis
+ * @version: 0.0.1
+ * @date: 2018/11/14
+ **/
+
+// -- Bootstrap settings overrides
+$enable-rounded: false;
+
+// -- Dist directory variables
+$fontsDir: "assets/fonts";
+$imagesDir: "assets/images";
+
+// -- Theme colour definitions
+$primary: #6441a5;
+$secondary: #7f4edb;
+$dark: #2a2a2a;
+$light: #343434;
+$text: #bebebe;
+$twitch: #6441a5;
+$twitter: #1da1f2;
+$discord: #7289da;
+$dbh: #00bbee;
+$facebook: #3b5998;
+$white: #ffffff;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+
+	(
+		"primary": $primary,
+		"secondary": $secondary,
+		"dark": $dark,
+		"light": $light,
+		"text": $text,
+		"twitch": $twitch,
+		"twitter": $twitter,
+		"discord": $discord,
+		"dbh": $dbh,
+		"facebook": $facebook
+	),
+	$theme-colors
+);
+
+// -- Set base colours
+$body-bg: theme-color("dark");
+$body-color: theme-color("text");
+
+// -- Links
+$link-color: theme-color("text");
+
+// -- Font paths
+$fa-font-path: "#{$fontsDir}/font-awesome";
+$cbc-font-path: "#{$fontsDir}/comicbookcommando";
+
+// -- Fonts
+$font-family-base: #{"Segoe UI", "Open Sans", Arial, Helvetica, sans-serif};
+$font-weight-base: 200;
+$font-size-base: 0.9375rem;
+$font-size-sm: 0.875rem;
+
+$line-height-base: 1.6;
+
+$headings-font-family: #{"Comic Book Commando", "Times New Roman", serif};
+$headings-color: $white;
+
+$quote-font-family: #{Georgia, "Times New Roman", serif};
+$quote-font-weight: 400;
+$quote-font-size: 1.625rem;
+$quote-line-height: 1.625rem;
+$quote-font-style: italic;
+
+$h1-font-size: 3.4375rem;
+$h2-font-size: 1.625rem;
+$h3-font-size: 2.25rem;
+$h4-font-size: 1.625rem;
+
+// -- Cards
+$card-bg: map-get($theme-colors, "dark");
+
+// -- Navbar
+$navbar-dark-color: map-get($theme-colors, "text");
+$navbar-light-color: map-get($theme-colors, "text");
+
+// -- Breadcrumb
+$breadcrumb-divider: quote(">");

@@ -1,0 +1,15 @@
+#footer {
+  height: 100px;
+  align-items: center;
+  display: flex;
+
+  .row {
+    justify-content: space-between;
+    
+    .socials {
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

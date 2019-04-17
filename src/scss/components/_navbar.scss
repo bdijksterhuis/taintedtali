@@ -1,0 +1,24 @@
+.navbar {
+	height: 100px;
+
+	.navbar-collapse {
+		flex-grow: 0;
+
+		.nav-item {
+			a {
+				text-transform: uppercase;
+				font-size: $font-size-sm;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: color("white");
+				}
+
+				&.active {
+					color: color("white");
+				}
+			}
+		}
+	}
+}
