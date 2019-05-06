@@ -1,0 +1,124 @@
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .light & {
+    .form-group {
+
+      input,
+      textarea,
+      select {
+        background: theme-color("dark");
+
+        &:active,
+        &:hover,
+        &:focus {
+          background: theme-color("dark");
+        }
+      }
+
+      .btn:disabled {
+        background: theme-color("dark");
+        border-color: theme-color("dark");
+      }
+    }
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    margin: 20px 0 0 0;
+
+    label,
+    .error {
+      position: absolute;
+      top: -4px;
+      left: 15px;
+      opacity: 0;
+      transition: all 0.3s ease;
+      font-style: italic;
+    }
+
+    .error {
+      right: 15px;
+      left: auto;
+      color: theme-color("danger");
+    }
+
+    input,
+    textarea,
+    select {
+      background: theme-color("light");
+      border: 0;
+      border-bottom: 10px solid theme-color("text");
+      color: color("white");
+      height: 60px;
+      transition: all 0.3s linear;
+      outline: 0;
+      box-shadow: none;
+      padding: 15px;
+
+      &::placeholder {
+        font-style: italic;
+        color: theme-color("text");
+      }
+
+      &:not(:placeholder-shown)+label,
+      &.ng-invalid.ng-dirty+label+.error {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+        border: 0;
+        box-shadow: none;
+        outline: 0;
+        border-bottom: 10px solid theme-color("primary");
+        background: theme-color("light");
+        color: color("white");
+      }
+
+      &.ng-invalid.ng-dirty {
+        border-bottom-color: theme-color("danger");
+      }
+
+      &:disabled {
+        background: theme-color("light");
+        border-color: theme-color("text");
+      }
+    }
+
+    textarea {
+      height: 100%;
+    }
+  }
+
+  .btn {
+    flex-grow: 1;
+    margin: 30px 15px 0 15px;
+    padding: 15px 0;
+    font-weight: $font-weight-base;
+    color: theme-color("text");
+
+    &:hover,
+    &:active {
+      color: color("white");
+    }
+
+    &:disabled {
+      background: theme-color("light");
+      border-color: theme-color("light");
+    }
+  }
+}

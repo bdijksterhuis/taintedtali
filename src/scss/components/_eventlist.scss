@@ -1,0 +1,69 @@
+.events {
+	.light & {
+		article {
+			background: theme-color("dark");
+		}
+	}
+
+	article {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		padding: 50px;
+		background: theme-color("light");
+		border-bottom: 10px solid theme-color("primary");
+		margin-bottom: 50px;
+
+		.icon {
+			border-right: 10px solid theme-color("primary");
+			margin: 0 30px 0 0;
+			height: 120px;
+
+			img {
+				height: 120px;
+				width: 120px;
+			}
+		}
+
+		.body {
+			flex-grow: 1;
+			margin-right: 30px;
+
+			header {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-content: flex-end;
+				margin: 0;
+				padding: 0;
+
+				h2 {
+					font-family: $font-family-base;
+					font-weight: $font-weight-base;
+				}
+			}
+		}
+
+		.btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 15px;
+
+			i {
+				margin: 0;
+				color: theme-color("text");
+				font-size: $h2-font-size;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				i {
+					color: color("white");
+				}
+			}
+		}
+	}
+}

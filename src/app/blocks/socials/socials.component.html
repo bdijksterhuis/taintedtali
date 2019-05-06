@@ -1,0 +1,40 @@
+<section class="socialcards block cards cards-header" [ngClass]="{'light': content.fields.background}">
+  <div class="container">
+    <header>
+      <h3>{{content.fields.title}}</h3>
+    </header>
+    <div class="card-deck small">
+      <a *ngFor="let social of content.fields.socials" href="{{social.fields.url}}"
+        class="card {{social.fields.classname}}">
+        <div class="card-body">
+          <i class="fab fa-{{social.fields.classname}}"></i>
+        </div>
+      </a>
+      <!--<a href="#" class="card twitch">
+        <div class="card-body">
+          <i class="fab fa-twitch"></i>
+        </div>
+      </a>
+      <a href="#" class="card discord">
+        <div class="card-body">
+          <i class="fab fa-discord"></i>
+        </div>
+      </a>
+      <a href="#" class="card twitter">
+        <div class="card-body">
+          <i class="fab fa-twitter"></i>
+        </div>
+      </a>
+      <a href="#" class="card facebook">
+        <div class="card-body">
+          <i class="fab fa-facebook"></i>
+        </div>
+      </a>
+      <a href="#" class="card instagram">
+        <div class="card-body">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </a>-->
+    </div>
+  </div>
+</section>

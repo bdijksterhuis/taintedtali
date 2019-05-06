@@ -1,0 +1,3 @@
+.btn-primary {
+	@include button-variant(theme-color("primary"), theme-color("primary"), theme-color("secondary"), theme-color("secondary"));
+}

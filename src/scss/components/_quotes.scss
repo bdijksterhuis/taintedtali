@@ -1,40 +1,32 @@
 .quote {
-  height: 200px;
-  padding: 50px 0;
-  background: theme-color("primary");
-  font-family: $quote-font-family;
-  font-size: $quote-font-size;
-  font-weight: $quote-font-weight;
-  line-height: $quote-line-height;
-  font-style: $quote-font-style;
-  color: color("white");
-  
-  .container,
-  .row {
-    height: 100%;
-  }
+	background: theme-color("primary");
+	font-family: $quote-font-family;
+	font-size: $quote-font-size;
+	font-weight: $quote-font-weight;
+	line-height: $quote-line-height;
+	font-style: $quote-font-style;
+	color: color("white");
 
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+	.container {
+		height: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: nowrap;
 
-    &::before,
-    &::after {
-      display: block;
-      height: 100%;
-      color: theme-color("secondary");
-      font-size: 5.625rem;
-      line-height: 1.0;
-    }
+		&::before,
+		&::after {
+			color: theme-color("secondary");
+			font-size: 5.625rem;
+		}
 
-    &::before {
-      content: "\201C";
-    }
-    &::after {
-      content: "\201D";
-      line-height: 2.0;
-    }
-  }
+		&::before {
+			content: "\201C";
+			margin-top: -20px;
+		}
+		&::after {
+			content: "\201D";
+			margin-top: 80px;
+		}
+	}
 }

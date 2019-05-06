@@ -1,0 +1,45 @@
+<section class="contactform block" [ngClass]="{ light: content.fields.background }">
+  <div class="container">
+    <header>
+      <h3>{{content.fields.title}}</h3>
+      <small [innerHTML]="content.fields.body | mdToHtml"></small>
+    </header>
+    <section class="form">
+      <form #contactForm="ngForm" @submitted *ngIf="!submitted" novalidate>
+        <div class="col col-6">
+          <div class="form-group">
+            <input type="text" name="name" id="name" required [(ngModel)]="form.name" class="form-control"
+              placeholder="Please enter your Name" />
+            <label for="name">Name:</label>
+            <span class="error">Your name is required</span>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" required email [(ngModel)]="form.email" class="form-control"
+              placeholder="Please enter your Email address" />
+            <label for="email">Email address:</label>
+            <span class="error">A valid Email address is required</span>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="subject" required [(ngModel)]="form.messageSubject"
+              class="form-control" placeholder="Please enter a subject" />
+            <label for="subject">Subject:</label>
+            <span class="error">The subject is required</span>
+          </div>
+        </div>
+        <div class="col col-6">
+          <div class="form-group">
+            <textarea class="form-control" name="message" id="message" required [(ngModel)]="form.messageBody"
+              placeholder="Please enter a message" rows="4"></textarea>
+            <label for="message">Message:</label>
+            <span class="error">Your message is required</span>
+          </div>
+        </div>
+        <button type="submit" [disabled]="contactForm.invalid" class="btn btn-primary">Submit</button>
+      </form>
+      <div @loading *ngIf="loading" class="loading"><span
+          [innerHTML]="content.fields.loadingText | mdToHtml"></span><span class="ellipsis"></span></div>
+      <div @loaded *ngIf="loaded && success" class="loaded" [innerHTML]="content.fields.successText | mdToHtml"></div>
+      <div @loaded *ngIf="loaded && !success" class="loaded" [innerHTML]="content.fields.errorText | mdToHtml"></div>
+    </section>
+  </div>
+</section>

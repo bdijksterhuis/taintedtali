@@ -1,0 +1,36 @@
+table {
+	width: 100%;
+	margin-bottom: 50px;
+
+	tr {
+		height: 50px;
+
+		th,
+		td {
+			padding: 0 50px;
+		}
+
+		th:nth-child(3),
+		td:nth-child(3) {
+			text-align: right;
+		}
+	}
+
+	thead {
+		background: theme-color("light");
+
+		.light & {
+			background: theme-color("dark");
+		}
+	}
+
+	tbody {
+		tr {
+			border-bottom: 1px solid theme-color("light");
+
+			.light & {
+				border-color: theme-color("dark");
+			}
+		}
+	}
+}

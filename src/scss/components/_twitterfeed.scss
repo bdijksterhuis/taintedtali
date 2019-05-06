@@ -1,7 +1,62 @@
-#twitterFeed {
-  
-  h4 { 
+section.twitterfeed {
+  h4 {
     margin-bottom: 10px;
+  }
+
+  .card-body {
+    p {
+      text-align: left;
+
+      a {
+        text-decoration: underline;
+        position: relative;
+
+        &:active,
+        &:hover,
+        &:focus {
+          color: color("white");
+        }
+      }
+    }
+  }
+
+  .card-image {
+    a {
+      display: block;
+      width: 100%;
+      position: relative;
+
+      &::before {
+        content: "\f0c1";
+        font-family: $icons-font-family;
+        font-weight: $icons-font-weight-solid;
+        font-size: $h2-font-size;
+        background: rgba(0, 0, 0, 0.6);
+        color: color("white");
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        margin-top: 20px;
+        display: block;
+      }
+    }
   }
 
   nav {
@@ -11,6 +66,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: $font-size-sm;
+    margin-top: 15px;
 
     a {
       &:active,
@@ -40,5 +96,9 @@
     p {
       text-align: justify;
     }
+  }
+
+  .btn.card-link {
+    margin-top: 15px;
   }
 }

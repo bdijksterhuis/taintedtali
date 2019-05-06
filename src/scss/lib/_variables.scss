@@ -25,6 +25,7 @@ $twitter: #1da1f2;
 $discord: #7289da;
 $dbh: #00bbee;
 $facebook: #3b5998;
+$instagram: #e1306c;
 $white: #ffffff;
 
 $theme-colors: () !default;
@@ -40,7 +41,8 @@ $theme-colors: map-merge(
 		"twitter": $twitter,
 		"discord": $discord,
 		"dbh": $dbh,
-		"facebook": $facebook
+		"facebook": $facebook,
+		"instagram": $instagram
 	),
 	$theme-colors
 );
@@ -52,27 +54,29 @@ $body-color: theme-color("text");
 // -- Links
 $link-color: theme-color("text");
 
+// -- Grid
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1350px);
+
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1310px);
+
 // -- Font paths
 $fa-font-path: "#{$fontsDir}/font-awesome";
 $cbc-font-path: "#{$fontsDir}/comicbookcommando";
-
 // -- Fonts
 $font-family-base: #{"Segoe UI", "Open Sans", Arial, Helvetica, sans-serif};
 $font-weight-base: 200;
 $font-size-base: 0.9375rem;
 $font-size-sm: 0.875rem;
-
 $line-height-base: 1.6;
-
 $headings-font-family: #{"Comic Book Commando", "Times New Roman", serif};
 $headings-color: $white;
-
 $quote-font-family: #{Georgia, "Times New Roman", serif};
 $quote-font-weight: 400;
 $quote-font-size: 1.625rem;
 $quote-line-height: 1.625rem;
 $quote-font-style: italic;
-
+$icons-font-family: quote(#{"Font Awesome 5 Free"});
+$icons-font-weight-solid: 900;
 $h1-font-size: 3.4375rem;
 $h2-font-size: 1.625rem;
 $h3-font-size: 2.25rem;
@@ -86,4 +90,4 @@ $navbar-dark-color: map-get($theme-colors, "text");
 $navbar-light-color: map-get($theme-colors, "text");
 
 // -- Breadcrumb
-$breadcrumb-divider: quote(">");
+$breadcrumb-divider: "\f101";

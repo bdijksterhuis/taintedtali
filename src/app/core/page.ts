@@ -21,6 +21,7 @@ export class PageAdapter implements Adapter<Page> {
 	constructor(private contentAdapter: ContentAdapter) {}
 	adapt(item: any): Page {
 		let i = item.fields;
-		return new Page(item.sys.id, i.name, i.navTitle, i.pageTitle, i.slug, i.isRoot, i.content.map((c) => this.contentAdapter.adapt(c)));
+		let isRoot = typeof i.root !== 'undefined' && i.root[0] == 'Yes';
+		return new Page(item.sys.id, i.name, i.navTitle, i.pageTitle, i.slug, isRoot, i.content.map((c) => this.contentAdapter.adapt(c)));
 	}
 }

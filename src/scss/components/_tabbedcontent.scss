@@ -1,0 +1,161 @@
+.tabbed-content {
+	background: theme-color("light");
+	padding: 50px;
+	margin-top: 10px;
+	display: flex;
+	width: 100%;
+
+	.light & {
+		background: theme-color("dark");
+
+		&.horizontal {
+			.nav {
+				.nav-link {
+					background: theme-color("light");
+				}
+			}
+			.tab-pane {
+				table {
+					tr {
+						border-bottom: 1px solid theme-color("light");
+
+						&:first-child {
+							border-top: 1px solid theme-color("light");
+						}
+					}
+				}
+			}
+		}
+	}
+
+	nav {
+		.nav-link {
+			border-bottom: 1px solid gray("700");
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&:first-child {
+				border-top: 1px solid gray("700");
+			}
+
+			&:hover,
+			&:active,
+			&:focus,
+			&.active {
+				background: darken(theme-color("light"), 5%);
+
+				.light & {
+					background: darken(theme-color("dark"), 5%);
+				}
+
+				img {
+					filter: none;
+					-webkit-filter: none;
+				}
+			}
+
+			img {
+				width: 36px;
+				height: 36px;
+				border-radius: 50% !important;
+				filter: grayscale(100%);
+				-webkit-filter: grayscale(100%);
+			}
+		}
+	}
+
+	.tab-content {
+		.tab-pane.active {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		header {
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			.socials {
+				a {
+					background: none;
+					color: theme-color("text");
+					font-size: $font-size-lg;
+
+					&:hover,
+					&:active,
+					&:focus {
+						color: color("white");
+					}
+				}
+			}
+		}
+	}
+
+	&.horizontal {
+		flex-direction: column;
+
+		.col:first-child {
+			padding-left: 0;
+		}
+		.col:last-child {
+			padding-right: 0;
+		}
+
+		.nav {
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+
+			.nav-link {
+				flex-grow: 1;
+				background: theme-color("dark");
+				border: 0;
+				height: 50px;
+				margin-bottom: 30px;
+				justify-content: center;
+
+				&.active {
+					background: theme-color("primary");
+					color: color("white");
+				}
+
+				&:hover:not(.active),
+				&:active:not(.active),
+				&:focus:not(.active) {
+					color: color("white");
+				}
+			}
+		}
+
+		.tab-pane {
+			&.active {
+				flex-direction: row;
+			}
+
+			table {
+				margin: 0;
+
+				tr {
+					height: 30px;
+					border-bottom: 1px solid theme-color("dark");
+
+					&:first-child {
+						border-top: 1px solid theme-color("dark");
+					}
+				}
+
+				td {
+					padding: 0;
+
+					&:nth-child(2) {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

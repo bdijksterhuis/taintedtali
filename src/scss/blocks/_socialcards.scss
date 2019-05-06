@@ -1,0 +1,49 @@
+.socialcards {
+	.card {
+		i {
+			font-size: $h3-font-size;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: color("white");
+		}
+
+		&.twitch {
+			&:hover,
+			&:active,
+			&:focus {
+				border-bottom-color: theme-color("twitch");
+			}
+		}
+		&.discord {
+			&:hover,
+			&:active,
+			&:focus {
+				border-bottom-color: theme-color("discord");
+			}
+		}
+		&.twitter {
+			&:hover,
+			&:active,
+			&:focus {
+				border-bottom-color: theme-color("twitter");
+			}
+		}
+		&.facebook {
+			&:hover,
+			&:active,
+			&:focus {
+				border-bottom-color: theme-color("facebook");
+			}
+		}
+		&.instagram {
+			&:hover,
+			&:active,
+			&:focus {
+				border-bottom-color: theme-color("instagram");
+			}
+		}
+	}
+}

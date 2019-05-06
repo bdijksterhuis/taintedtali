@@ -1,21 +1,20 @@
-<section id="welcome">
-    <div class="container">
-        <div class="row">
-            <article class="col col-8 text">
-                <header>
-                    <h1 class="title">{{content.fields.title}}</h1>
-                    <p>{{content.fields.body}}</p>
-                </header>
-                <footer>
-                    <h3>{{content.fields.socialsTitle}}</h3>
-                    <a *ngFor="let social of content.fields.socials" class="btn btn-lg btn-{{social.fields.classname}}" target="_blank">
-                        <i class="fab fa-{{social.fields.classname}}"></i>{{social.fields.title}}
-                    </a>
-                </footer>
-            </article>
-            <aside class="col col-4 fort-tali">
-                <img src="{{content.fields.image.fields.file.url}}" alt="{{content.fields.image.fields.description}}">
-            </aside>
-        </div>
-    </div>
+<section class="highlight block">
+  <div class="container">
+    <article class="col col-8 text">
+      <header>
+        <h1 class="title">{{content.fields.title}}</h1>
+        <p [innerHtml]="content.fields.body | mdToHtml"></p>
+      </header>
+      <footer>
+        <h3>{{content.fields.socialsTitle}}</h3>
+        <a *ngFor="let social of content.fields.socials" class="btn btn-lg btn-{{social.fields.classname}}"
+          target="_blank" href="{{social.fields.url}}">
+          <i class="fab fa-{{social.fields.classname}}"></i>{{social.fields.title}}
+        </a>
+      </footer>
+    </article>
+    <aside class="col col-4 fort-tali">
+      <img src="{{content.fields.image.fields.file.url}}" alt="{{content.fields.image.fields.description}}">
+    </aside>
+  </div>
 </section>

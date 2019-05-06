@@ -1,17 +1,17 @@
-
 <header id="mainNav" class="navbar navbar-expand-md">
-    <div class="container">
-        <a [routerLink]="'/'" class="navbar-brand"><img src="assets/images/logo.png" alt="Taintedtali"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
-            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav">
-                <li *ngFor="let page of content.fields.menu" class="nav-item">
-                    <a [routerLink]="['/', page.fields.url]" routerLinkActive="active" class="nav-link">{{page.fields.navTitle}}</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+  <div class="container">
+    <a [routerLink]="'/'" class="navbar-brand"><img src="assets/images/logo.png" alt="Taintedtali"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav">
+        <li *ngFor="let page of content.fields.menu" class="nav-item">
+          <a [routerLink]="['/', page.fields.url]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            class="nav-link">{{page.fields.navTitle}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>

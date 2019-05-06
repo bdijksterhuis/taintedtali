@@ -1,0 +1,36 @@
+.pagination {
+	margin: 0 auto;
+
+	.light & {
+		.page-item {
+			.page-link {
+				background: theme-color("dark");
+			}
+		}
+	}
+
+	.page-item {
+		margin: 0 0 0 1px;
+
+		.page-link {
+			background: theme-color("light");
+			border: 0;
+			margin: 0;
+			height: 50px;
+			line-height: 50px;
+			padding: 0 25px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: color("white");
+			}
+		}
+
+		&.active .page-link {
+			background: theme-color("secondary");
+			color: color("white");
+			cursor: pointer;
+		}
+	}
+}

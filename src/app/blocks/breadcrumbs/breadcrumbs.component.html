@@ -1,13 +1,14 @@
-<section id="breadcrumbs">
-    <div class="container">
-        <div class="row">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li *ngIf="content.fields.displayRoot" class="breadcrumb-item"><a [routerLink]="['/']">{{rootPage.navTitle}}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">{{this.currentPage.pageTitle}}</li>                    
-                </ol>
-            </nav>
-            <img src="{{content.fields.logo.fields.file.url}}" alt="{{content.fields.logo.fields.description}}" class="breadcrumb-image">
-        </div>
-    </div>
+<section class="block breadcrumbs">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li *ngIf="content.fields.displayRoot" class="breadcrumb-item">
+          <a [routerLink]="['/']">{{rootPage.navTitle}}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{this.currentPage.pageTitle}}</li>
+      </ol>
+    </nav>
+    <img src="{{content.fields.logo.fields.file.url}}" alt="{{content.fields.logo.fields.description}}"
+      class="breadcrumb-image">
+  </div>
 </section>

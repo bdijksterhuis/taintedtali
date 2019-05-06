@@ -1,10 +1,12 @@
 // -- Modules
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+
+import { MdToHtmlPipe } from "./md-to-html.pipe";
 
 @NgModule({
-	declarations: [],
-	imports: [ CommonModule ],
-	exports: []
+  declarations: [MdToHtmlPipe],
+  imports: [CommonModule],
+  exports: [MdToHtmlPipe]
 })
 export class CoreModule {}

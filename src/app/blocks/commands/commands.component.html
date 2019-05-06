@@ -1,0 +1,77 @@
+<section class="block" [ngClass]="{'light': content.fields.background}">
+  <div class="container">
+    <header>
+      <h3>Chat commands</h3>
+    </header>
+    <table class="commands">
+      <thead>
+        <tr>
+          <th scope="col">Command</th>
+          <th scope="col">Output</th>
+          <th scope="col">Permission</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>!blind</td>
+          <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!boobies</td>
+          <td>Aenean commodo ligula eget dolor.</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!cake</td>
+          <td>Aenean massa.</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!cheers</td>
+          <td>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!commands</td>
+          <td>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!dance</td>
+          <td>Nulla consequat massa quis enim</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!dedinfo</td>
+          <td>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!donate</td>
+          <td>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!emotes</td>
+          <td>Nullam dictum felis eu pede mollis pretium</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td>!freesub</td>
+          <td>Integer tincidunt</td>
+          <td>Everyone</td>
+        </tr>
+      </tbody>
+    </table>
+    <nav aria-label="Commands navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a (click)="fetchMoreResults()" class="page-link">Previous</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item active"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>

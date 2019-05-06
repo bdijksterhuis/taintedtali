@@ -1,4 +1,21 @@
-.content { 
-    padding: 50px 0;
-    background: theme-color("light");
+.content {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &.singleColumn {
+    .container {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+
+      ul,
+      ol {
+        list-style-position: inside;
+      }
+    }
+  }
 }

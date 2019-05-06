@@ -1,0 +1,19 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .ellipsis {
+    display: inline-block;
+    width: 80px;
+
+    &:after {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: bottom;
+      animation: ellipsis steps(4, end) 2000ms infinite;
+      content: "\2026";
+      width: 0;
+    }
+  }
+}

@@ -9,13 +9,10 @@
 				text-transform: uppercase;
 				font-size: $font-size-sm;
 
+				&.active,
 				&:hover,
 				&:active,
 				&:focus {
-					color: color("white");
-				}
-
-				&.active {
 					color: color("white");
 				}
 			}

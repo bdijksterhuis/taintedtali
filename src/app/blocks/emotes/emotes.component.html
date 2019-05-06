@@ -1,0 +1,21 @@
+<section class="block cards cards-header" [ngClass]="{'light': content.fields.background}">
+  <div class="container">
+    <header>
+      <h3>{{content.fields.title}}</h3>
+    </header>
+    <div class="card-deck">
+      <article class="card" *ngFor="let tier of content.fields.tiers">
+        <div class="card-body">
+          <h4 class="card-title">{{tier.fields.title}} - ${{tier.fields.price}}</h4>
+          <div class="card-text emotes">
+            <figure class="emote" *ngFor="let emote of tier.fields.emotes">
+              <img src="{{emote.fields.file.url}}" alt="{{emote.fields.title}}">
+              <figcaption>{{emote.fields.title}}</figcaption>
+            </figure>
+          </div>
+        </div>
+        <a href="{{tier.fields.url}}" class="btn btn-primary card-link highlight" role="button">Subscribe now!</a>
+      </article>
+    </div>
+  </div>
+</section>

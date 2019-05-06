@@ -1,32 +1,39 @@
-#breadcrumbs {
-  background: url("#{$imagesDir}/highlight_bg.jpg") center center no-repeat;
-  background-size: cover;
-  height: 50px;
+section.breadcrumbs {
+	background: url("#{$imagesDir}/highlight_bg.jpg") center center no-repeat;
+	background-size: cover;
+	height: 50px;
+	padding: 0;
 
-  .container,
-  .row {
-    height: 100%;
-  }
+	.container {
+		height: 100%;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+	}
 
-  .row {
-    justify-content: space-between;
-    align-items: center;
+	.breadcrumb {
+		background-color: unset;
+		margin: 0;
 
-    .breadcrumb { 
-        background-color: unset;
-        margin: 0;
-        
-        .breadcrumb-item, .breadcrumb-item a { 
-            color: theme-color("text");
+		.breadcrumb-item,
+		.breadcrumb-item a {
+			color: color("white");
 
-            &.active { 
-                color: theme-color("text");
-            }
+			&.active {
+				color: color("white");
+			}
 
-            &:not(.active):hover, &:not(.active):active, &:not(.active):focus { 
-                color: color("white");
-            }
-        }
-    }
-  }
+			&::before {
+				font-family: $icons-font-family;
+				font-weight: $icons-font-weight-solid;
+				color: color("white");
+			}
+
+			&:not(.active):hover,
+			&:not(.active):active,
+			&:not(.active):focus {
+				color: theme-color("primary");
+			}
+		}
+	}
 }

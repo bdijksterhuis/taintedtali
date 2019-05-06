@@ -1,12 +1,10 @@
 <footer id="footer">
-    <div class="container">
-        <div class="row">
-            <span class="copyright">{{content.fields.copyright}}</span>
-            <div class="socials">
-                <a *ngFor="let social of content.fields.socials" href="{{social.fields.url}}" class="{{social.fields.classname}}">
-                    <i class="fab fa-{{social.fields.classname}}"></i>
-                </a>
-            </div>
-        </div>
+  <div class="container">
+    <span class="copyright">{{content.fields.copyright}}</span>
+    <div class="socials">
+      <a *ngFor="let social of content.fields.socials" href="{{social.fields.url}}" class="{{social.fields.classname}}">
+        <i class="fab fa-{{social.fields.classname}}"></i>
+      </a>
     </div>
+  </div>
 </footer>
